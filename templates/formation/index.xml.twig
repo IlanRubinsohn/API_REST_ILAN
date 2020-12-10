@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<formations>
+        {% for formation in formations %}
+            <formartion>
+                <id>{{ formation.id }}</id>
+                <nom>{{ formation.Name }}</nom>
+                <niveau>{{ formation.level }}</niveau>
+                <temps>{{ formation.time }}</temps>
+            </formartion>
+        {% else %}
+            <formartion>no records found</formartion>
+        {% endfor %}
+</formations>

@@ -21,7 +21,27 @@ class FormationController extends AbstractController
     public function index(FormationRepository $formationRepository): Response
     {
         return $this->render('formation/index.html.twig', [
-            'formations' => $formationRepository->findBachelor(),
+            'formations' => $formationRepository->findAll()
+        ]);
+    }
+
+    /**
+     * @Route("/json", name="formation_index_json", methods={"GET"})
+     */
+    public function index_json(FormationRepository $formationRepository): Response
+    {
+        return $this->json ([
+            'formations' => $formationRepository->findAll()
+        ]);
+    }
+
+    /**
+     * @Route("/xml", name="formation_index_xml", methods={"GET"})
+     */
+    public function index_xml(FormationRepository $formationRepository): Response
+    {
+        return $this->render('formation/index.xml.twig', [
+            'formations' => $formationRepository->findAll()
         ]);
     }
 

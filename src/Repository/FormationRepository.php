@@ -26,8 +26,6 @@ class FormationRepository extends ServiceEntityRepository
                   ->setParameters(array('nom' => 'Bachelor CSI'));
         $resultat=$sql->getResult();
         return $resultat;
-
-
     }
 
 

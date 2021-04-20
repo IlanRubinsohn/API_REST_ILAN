@@ -47,18 +47,16 @@ jobs:
             ssh azureuser@20.188.34.16
             exit
 workflows:
-  version:
+  version: 2
   notify_deploy:
     jobs:
       - build:
-          - filters:
+          filters:
               branches:
-                only:
-                  - master
+                only: master
       - deploy:
           requires:
-            - build:
+            - build
           filters:
             branches:
-              only:
-                - master
+              only: master

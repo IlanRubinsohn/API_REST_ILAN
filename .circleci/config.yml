@@ -44,7 +44,7 @@ jobs:
       - run:
           name: Ma premiere onnexion
           command: |
-            ssh azureuser@20.188.34.16
+            ssh azureuser@20.188.34.16 -oStrictHostKeyChecking=no
             exit
 workflows:
   version: 2

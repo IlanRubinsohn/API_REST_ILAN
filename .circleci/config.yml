@@ -32,3 +32,17 @@ jobs:
           key: v1-dependencies-{{ checksum "composer.json" }}
           paths:
             - ./vendor
+  deploy:
+    docker:
+      # Specify the version you desire here
+      - image: circleci/php:7.2-node-browsers
+    steps:
+      - checkout
+      - add_ssh_keys:
+          fingerprints:
+            - "3b:6a:82:6e:e9:e6:44:ba:8b:39:2b:04:06:e1:1d:9a"
+      - run:
+          name: Ma premiere onnexion
+          command: |
+            ssh azureuser@20.188.34.16
+            exit

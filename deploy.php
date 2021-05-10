@@ -1,6 +1,8 @@
 <?php
 namespace Deployer;
 
+use http\Message\Body;
+
 require 'recipe/symfony.php';
 
 // Project name
@@ -30,8 +32,16 @@ host('20.188.34.16')
     
 // Tasks
 
+task('deploy', [
+    'rename_env'
+]);
+
 task('build', function () {
     run('cd {{release_path}} && build');
+});
+
+task('rename._env', function () {
+   run('cp ~/.env ~/{{application}}');
 });
 
 // [Optional] if deploy fails automatically unlock.

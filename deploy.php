@@ -12,8 +12,8 @@ set('application', 'API_REST_ILAN');
 set('repository', 'git@github.com:IlanRubinsohn/API_REST_ILAN.git');
 
 // [Optional] Allocate tty for git clone. Default value is false.
-set('git_tty', true); 
-
+set('git_tty', true);
+set('git_recursive', false);
 // Shared files/dirs between deploys 
 add('shared_files', []);
 add('shared_dirs', []);

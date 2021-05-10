@@ -46,6 +46,7 @@ task('deploy', [
     'deploy:cache:warmup',
     'deploy:writable',
     'deploy:symlink',
+    'deploy:chown',
     'deploy:unlock',
     'cleanup',
     'success'
@@ -55,7 +56,7 @@ task('build', function () {
     run('cd {{release_path}} && build');
 });
 
-task('rename_env', function () {
+task('deploy:rename_env', function () {
    run('cp ~/.env ~/{{application}}');
 });
 

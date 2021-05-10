@@ -33,6 +33,7 @@ host('20.188.34.16')
 // Tasks
 
 task('deploy', [
+    'deploy:unlock',
     'deploy:info',
     'deploy:prepare',
     'deploy:lock',

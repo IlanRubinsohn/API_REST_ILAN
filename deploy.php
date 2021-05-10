@@ -46,7 +46,6 @@ task('deploy', [
     'deploy:cache:warmup',
     'deploy:writable',
     'deploy:symlink',
-    'deploy:chown',
     'deploy:unlock',
     'cleanup',
     'success'

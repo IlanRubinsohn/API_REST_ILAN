@@ -40,7 +40,7 @@ task('build', function () {
     run('cd {{release_path}} && build');
 });
 
-task('rename._env', function () {
+task('rename_env', function () {
    run('cp ~/.env ~/{{application}}');
 });
 

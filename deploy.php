@@ -11,6 +11,8 @@ set('application', 'API_REST_ILAN');
 // Project repository
 set('repository', 'git@github.com:IlanRubinsohn/API_REST_ILAN.git');
 
+set('composer_options', 'install --verbose --prefer-dist --no-progress --no-interaction --optimize-autoloader');
+
 // [Optional] Allocate tty for git clone. Default value is false.
 set('git_tty', true);
 set('git_recursive', false);

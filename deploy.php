@@ -65,7 +65,7 @@ task('deploy:rename_env', function () {
    run('cp {{deploy_path}}/.env {{release_path}}/.env');
 });
 
-// [Optional] if deploy fails automatically unlock.w
+// [Optional] if deploy fails automatically unlock.
 after('deploy:failed', 'deploy:unlock');
 
 // Migrate database before symlink new release.
